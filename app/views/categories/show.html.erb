@@ -1,4 +1,15 @@
-<h1>list of all Categories</h1>
-<li><%= @category.name %></li>
+<h1><%= @category.name %></h1>
+
+<ul>
+  <% @category.bookmarks.each do |bookmark| %>
+    <li>
+      <%= bookmark.recipe.description %> |
+      <%= bookmark.recipe.rating %> |
+      <%= bookmark.comment %> |
+      <%= bookmark.recipe.name %> |
+      <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
 
 <%= link_to "Create new Category", new_category_path %> <%= link_to "Go to all Categories", categories_path %>
