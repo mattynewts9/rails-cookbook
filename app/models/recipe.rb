@@ -1,3 +1,8 @@
 class Recipe < ApplicationRecord
-  has_many :bookmarks, :categories
+  has_many :bookmarks
+  has_many :categories, through: :bookmarks
+  validates :description, presence: true
+  validates :name, presence: true, uniqueness: true
+  # validates :rating, inclusion: { :in [1,2,3,4,5,6,7,8,9,10] }
+  validates numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 10 }
 end
