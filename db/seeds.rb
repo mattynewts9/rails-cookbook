@@ -11,6 +11,12 @@
 # db/seeds.rb
 Recipe.destroy_all
 
+Category.create(name: 'Dessert')
+Category.create(name: 'Vegeterian')
+Category.create(name: 'Italian')
+Category.create(name: 'Russian')
+Category.create(name: 'Indian')
+
 Recipe.create!([
   {
     name: "Spaghetti Carbonara",
