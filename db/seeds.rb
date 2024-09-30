@@ -7,3 +7,34 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# db/seeds.rb
+Recipe.destroy_all
+
+Recipe.create!([
+  {
+    name: "Spaghetti Carbonara",
+    description: "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+    rating: 9.5
+  },
+  {
+    name: "Chicken Tikka Masala",
+    description: "A popular Indian dish with grilled marinated chicken simmered in a creamy tomato curry sauce.",
+    rating: 8.8
+  },
+  {
+    name: "Beef Stroganoff",
+    description: "A Russian comfort dish of sautéed beef in a rich, creamy mushroom sauce served over noodles.",
+    rating: 8.2
+  },
+  {
+    name: "Vegetarian Chili",
+    description: "A hearty and spicy chili made with a variety of beans, tomatoes, and vegetables.",
+    rating: 7.9
+  },
+  {
+    name: "Chocolate Lava Cake",
+    description: "A decadent chocolate dessert with a molten center that flows when you cut into it.",
+    rating: 9.7
+  }
+])
