@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :categories do
     resources :bookmarks, only: [:new, :create]
   end
-
+  root "categories#index"
   resources :bookmarks, only: [:destroy]
 
   # Defines the root path route ("/")
