@@ -1,9 +1,10 @@
-<h1>Which Recipe would you now like to add to your <%= @category.name %> list?</h1>
+<div class="container">
 
-<%= simple_form_for [@category, @bookmark], defaults: { wrapper_html: { class: "form-new"}, label:_html: { class: "px-2"}} do |f| %>
-  <%= f.association :recipe, placeholder: "Choose a recipe from the dropdown" %>
-  <%= f.input :comment %>
-  <%= f.submit "add Recipe"%>
-<% end %>
+  <h1>Which Recipe would you now like to add to your <%= @category.name %> list?</h1>
 
-<%= link_to 'back', category_path(@category) %>
+  <%= simple_form_for [@category, @bookmark], defaults: { wrapper_html: { class: "form-new"}, label_html: { class: "px-2"}} do |f| %>
+    <%= f.association :recipe, placeholder: "Choose a recipe from the dropdown" %>
+    <%= f.input :comment %>
+    <%= f.submit "add Recipe"%>
+  <% end %>
+</div>

@@ -4,6 +4,7 @@
 
   <%= simple_form_for(@categories, defaults: { input_html: { class: "form-new" } } ) do |f| %>
     <%= f.input :name, wrapper_html: { class: "form-new" } %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "Add Category", class: "btn btn-primary btn-font-white" %>
   <% end %>
 </div>

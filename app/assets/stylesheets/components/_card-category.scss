@@ -18,6 +18,12 @@
   list-style-type: none;
 }
 
-.card-category ul li {
+.card-category li a {
   color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.category_container {
+  display: block;
 }
